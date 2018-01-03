@@ -1,0 +1,30 @@
+<div class="wrapper row3 animated fadeIn">
+    <section class="hoc container clear">
+      <h3>Our Film Products</h3>
+      <div class="row" *ngIf="filmList">
+        <div class="col-sm-4" *ngFor="let film of filmList | paginate: { itemsPerPage: 6, currentPage: page }">
+          <article>
+            <iframe height="200" width="250" [src]='film.url | urlFilter' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><br>
+            <span style="font-size: small">
+              <b>{{film.title}}</b>
+            </span><br/>
+            <span style="color:darkgray; font-size: smaller">Language :- {{film.language}}</span><br/>
+            <span style="color:darkgray; font-size: smaller">Director:- {{film.director}}</span><br/>
+            <a (click)="viewInformation(commercial)" style="cursor: pointer;">{{show_less}}</a>
+            <div class="showMore" *ngIf="showmore">
+              <span style="color:darkgray; font-size: smaller">Feedback:- {{film.feedback}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Producer:- {{film.producer}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Cast:- {{film.cast}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Concept:- {{film.concept}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">storyBoard:- {{film.storyBoard}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Strunt:- {{film.strunt}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Camera:- {{film.camera}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Video Editor:- {{film.videoEditor}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Feedback:- {{film.feedback}}</span><br/>
+            </div>
+          </article>
+        </div>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </section>
+</div>

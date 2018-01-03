@@ -1,0 +1,26 @@
+<div class="wrapper row3 animated fadeIn">
+    <section class="hoc container clear">
+      <h3>Our Music Video Products</h3>
+      <div class="row" *ngIf="musicList">
+        <div class="col-sm-4" *ngFor="let music of musicList | paginate: { itemsPerPage: 6, currentPage: page }">
+          <article>
+            <iframe height="200" width="250" [src]='music.url | urlFilter' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><br>
+            <span style="font-size: small">
+              <b>{{music.title}}</b>
+            </span><br/>
+            <span style="color:darkgray; font-size: smaller">Language :- {{music.language}}</span><br/>
+            <span style="color:darkgray; font-size: smaller">Production:- {{music.production}}</span><br/>
+            <a (click)="viewInformation(music)" style="cursor: pointer;">{{show_less}}</a>
+            <div class="showMore" *ngIf="showmore">
+              <span style="color:darkgray; font-size: smaller">Lyrics:- {{music.lyrics}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Artist:- {{music.artist}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Music By:- {{music.musicBy}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Camera:- {{music.camera}}</span><br/>
+              <span style="color:darkgray; font-size: smaller">Feedback:- {{music.feedback}}</span>
+            </div>
+          </article>
+        </div>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </section>
+</div>
