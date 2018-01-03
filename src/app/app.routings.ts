@@ -8,6 +8,8 @@ import { SilverPackageComponent }     from "./silver-package/silver-package.comp
 import { GoldPackageComponent }       from "./gold-package/gold-package.component";
 import { PlatinumPackageComponent }   from "./platinum-package/platinum-package.component";
 import { CommercialComponent }        from "./commercial/commercial.component";
+import { FilmComponent }              from "./film/film.component";
+import { MusicVideoComponent }        from "./music-video/music-video.component";
 
 const appRoutes: Routes = [
   { path:'home', component: HomeComponent},
@@ -16,6 +18,8 @@ const appRoutes: Routes = [
   { path:'gold', component: GoldPackageComponent},
   { path:'platinum', component: PlatinumPackageComponent},
   { path:'commercial', component: CommercialComponent},
+  { path:'film', component: FilmComponent},
+  { path:'music_video', component: MusicVideoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

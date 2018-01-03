@@ -4,6 +4,7 @@ import { FormsModule }              from '@angular/forms';
 import { HttpModule }               from '@angular/http';
 import { AppRouting }               from './app.routings';
 import { AgmCoreModule }            from '@agm/core';
+import { NgxPaginationModule }      from 'ngx-pagination';
 
 import { AppComponent }             from './app.component';
 import { NavbarComponent }          from './navbar/navbar.component';
@@ -14,9 +15,13 @@ import { SilverPackageComponent }   from './silver-package/silver-package.compon
 import { GoldPackageComponent }     from './gold-package/gold-package.component';
 import { PlatinumPackageComponent } from './platinum-package/platinum-package.component';
 import { CommercialComponent }      from './commercial/commercial.component';
+import { FilmComponent }            from './film/film.component';
+import { MusicVideoComponent }      from './music-video/music-video.component';
 
 import { CommercialService }        from './commercial/commercial.service';
+import { FilmService }              from './film/film.service';
 import { BaseService }              from './base.service';
+import { MusicVideoService }        from './music-video/music-video.service';
 
 /*
  * pipes import
@@ -34,7 +39,9 @@ import { UrlFilter }                from './Pipes/UrlFilter.pipe';
     GoldPackageComponent,
     PlatinumPackageComponent,
     CommercialComponent,
-    UrlFilter
+    UrlFilter,
+    FilmComponent,
+    MusicVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +50,13 @@ import { UrlFilter }                from './Pipes/UrlFilter.pipe';
     AppRouting,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC-JuozAwksmVpSB6-qCdtLHNglnnTnZpM'
-    })
+    }),
+    NgxPaginationModule
   ],
   providers: [
     CommercialService,
+    FilmService,
+    MusicVideoService,
     BaseService
   ],
   bootstrap: [AppComponent]
