@@ -22,9 +22,11 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "@pluritech/ng2-responsive-table": "^1.1.1",
+    "animate.css": "^3.5.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "axios": "^0.16.2"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0",

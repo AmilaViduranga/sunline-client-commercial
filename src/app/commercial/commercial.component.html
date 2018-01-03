@@ -1,0 +1,38 @@
+<div class="wrapper row3 animated fadeIn">
+    <section class="hoc container clear">
+      <h3>Our Commercial Products</h3>
+      <div class="row" *ngIf="commercialList">
+        <div class="col-sm-4" *ngFor="let commercial of commercialList">
+          <article>
+            <iframe height="200" width="250" [src]='commercial.url | urlFilter' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><br>
+            <span style="font-size: small">
+              <b>{{commercial.title}}</b>
+            </span><br/>
+            <span style="color:darkgray; font-size: smaller">{{commercial.client}}</span><br/>
+            <span style="color:darkgray; font-size: smaller">{{commercial.director}}</span><br/>
+            <a href="#" data-toggle="modal" data-target="#myModal">More Info...</a>
+          </article>
+        </div>
+      </div>
+    </section>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
