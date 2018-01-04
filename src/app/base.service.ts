@@ -32,4 +32,17 @@ export class BaseService {
       })
     })
   }
+
+  /*
+   * post request
+   * */
+  post(path, data) {
+    return new Promise((resolve, reject) => {
+      this.axios.post(this.baseUrl + path, data).then(response => {
+        resolve(response);
+      }).catch(err => {
+        reject(err);
+      })
+    })
+  }
 }

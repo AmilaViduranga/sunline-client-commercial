@@ -11,6 +11,7 @@ import { CommercialComponent }        from "./commercial/commercial.component";
 import { FilmComponent }              from "./film/film.component";
 import { MusicVideoComponent }        from "./music-video/music-video.component";
 import { TeledramaComponent }         from "./teledrama/teledrama.component";
+import { CommentComponent }           from "./comment/comment.component";
 
 const appRoutes: Routes = [
   { path:'home', component: HomeComponent},
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path:'film', component: FilmComponent},
   { path:'music_video', component: MusicVideoComponent},
   { path:'teledrama', component: TeledramaComponent},
+  { path:'comment', component: CommentComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
