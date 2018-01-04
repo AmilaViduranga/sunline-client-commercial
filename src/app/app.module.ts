@@ -18,12 +18,14 @@ import { CommercialComponent }      from './commercial/commercial.component';
 import { FilmComponent }            from './film/film.component';
 import { MusicVideoComponent }      from './music-video/music-video.component';
 import { TeledramaComponent }       from './teledrama/teledrama.component';
+import { CommentComponent }         from './comment/comment.component';
 
 import { CommercialService }        from './commercial/commercial.service';
 import { FilmService }              from './film/film.service';
 import { BaseService }              from './base.service';
 import { MusicVideoService }        from './music-video/music-video.service';
 import { TeledramaService }         from './teledrama/teledrama.service';
+import { CommentService }           from './comment/comment.service';
 
 /*
  * pipes import
@@ -44,7 +46,8 @@ import { UrlFilter }                from './Pipes/UrlFilter.pipe';
     UrlFilter,
     FilmComponent,
     MusicVideoComponent,
-    TeledramaComponent
+    TeledramaComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { UrlFilter }                from './Pipes/UrlFilter.pipe';
     FilmService,
     MusicVideoService,
     TeledramaService,
+    CommentService,
     BaseService
   ],
   bootstrap: [AppComponent]
