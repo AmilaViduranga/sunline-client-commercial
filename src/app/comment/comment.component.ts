@@ -31,7 +31,9 @@ export class CommentComponent implements OnInit {
   insertNewFeedback() {
     if(this.newComment.owner !== "" && this.newComment.comment !== "") {
       this.service.addNewFeedback(this.newComment).then(result => {
-        console.log(result);
+        this.getAllComments().then(results => {
+          this.commentList = results['data'];
+        })
       }).catch(err => {
         console.log(err);
       })

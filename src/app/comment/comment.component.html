@@ -21,6 +21,7 @@
       </div>
       <div class="col-sm-11">
         <p>{{comment.comment}}</p>
+        <p style="font-size: x-small; color:darkgray; font-style: italic">{{comment.createdAt}}</p>
       </div>
     </div><br>
     <pagination-controls (pageChange)="page = $event"></pagination-controls>
