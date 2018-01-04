@@ -17,11 +17,13 @@ import { PlatinumPackageComponent } from './platinum-package/platinum-package.co
 import { CommercialComponent }      from './commercial/commercial.component';
 import { FilmComponent }            from './film/film.component';
 import { MusicVideoComponent }      from './music-video/music-video.component';
+import { TeledramaComponent }       from './teledrama/teledrama.component';
 
 import { CommercialService }        from './commercial/commercial.service';
 import { FilmService }              from './film/film.service';
 import { BaseService }              from './base.service';
 import { MusicVideoService }        from './music-video/music-video.service';
+import { TeledramaService }         from './teledrama/teledrama.service';
 
 /*
  * pipes import
@@ -41,7 +43,8 @@ import { UrlFilter }                from './Pipes/UrlFilter.pipe';
     CommercialComponent,
     UrlFilter,
     FilmComponent,
-    MusicVideoComponent
+    MusicVideoComponent,
+    TeledramaComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { UrlFilter }                from './Pipes/UrlFilter.pipe';
     CommercialService,
     FilmService,
     MusicVideoService,
+    TeledramaService,
     BaseService
   ],
   bootstrap: [AppComponent]

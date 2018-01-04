@@ -10,6 +10,7 @@ import { PlatinumPackageComponent }   from "./platinum-package/platinum-package.
 import { CommercialComponent }        from "./commercial/commercial.component";
 import { FilmComponent }              from "./film/film.component";
 import { MusicVideoComponent }        from "./music-video/music-video.component";
+import { TeledramaComponent }         from "./teledrama/teledrama.component";
 
 const appRoutes: Routes = [
   { path:'home', component: HomeComponent},
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   { path:'commercial', component: CommercialComponent},
   { path:'film', component: FilmComponent},
   { path:'music_video', component: MusicVideoComponent},
+  { path:'teledrama', component: TeledramaComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
