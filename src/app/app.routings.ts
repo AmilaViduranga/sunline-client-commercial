@@ -12,10 +12,12 @@ import { FilmComponent }              from "./film/film.component";
 import { MusicVideoComponent }        from "./music-video/music-video.component";
 import { TeledramaComponent }         from "./teledrama/teledrama.component";
 import { CommentComponent }           from "./comment/comment.component";
+import { FoundationHomeComponent }    from "./foundation-home/foundation-home.component";
+import { FoundationFounderComponent } from "./foundation-founder/foundation-founder.component";
 
 const appRoutes: Routes = [
   { path:'home', component: HomeComponent},
-  { path: 'aboutus',  component:AboutUsComponent},
+  { path:'aboutus',  component:AboutUsComponent},
   { path:'silver', component:SilverPackageComponent},
   { path:'gold', component: GoldPackageComponent},
   { path:'platinum', component: PlatinumPackageComponent},
@@ -24,6 +26,8 @@ const appRoutes: Routes = [
   { path:'music_video', component: MusicVideoComponent},
   { path:'teledrama', component: TeledramaComponent},
   { path:'comment', component: CommentComponent},
+  { path:'amarkoon_home', component: FoundationHomeComponent},
+  { path:'amarakoon_founder', component: FoundationFounderComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

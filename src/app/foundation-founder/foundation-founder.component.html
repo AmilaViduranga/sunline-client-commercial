@@ -1,0 +1,18 @@
+<div class="wrapper row3 animated fadeIn">
+  <section class="hoc container clear">
+    <h1>About Founder</h1>
+    <div class="row">
+      <div class="row" *ngIf="founderList">
+        <div class="col-sm-4" *ngFor="let founder of founderList | paginate: { itemsPerPage: 6, currentPage: page }">
+          <article>
+            <iframe height="200" width="250" [src]='founder.url | urlFilter' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><br>
+            <span style="font-size: small">
+              <b>{{founder.description}}</b>
+            </span><br/>
+          </article><br/><br/>
+        </div>
+      </div>
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </section>
+</div>
